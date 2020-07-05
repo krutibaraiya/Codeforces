@@ -11,29 +11,22 @@ const int N = 1e5 + 5;
 int32_t main()
 {
    IOS;
-   string s;
-   cin >> s;
-   char c='a';
-
-   for(int i=0; i<s.length();i++)
+   int n;
+   cin >> n;
+   int a[n];
+   for(int i=0; i<n; i++)
    {
-   		if(s[i]<=c)
-   		{
-   			s[i]=c;
-   			c++;
-   		}
-
-   		if(c>'z')
-   		{
-   			cout << s;
-   			return 0;
-   		}
+   		cin >> a[i];
    }
 
-   cout << -1 << endl;
+   sort(a,a+n);
 
+   if(a[n-1]-a[0]+1==n)
+   	cout << 0 << endl;
+   else
+   	cout << a[n-1]-a[0]+1-n << endl;
 
 
    return 0;
 }
- 	
+ 

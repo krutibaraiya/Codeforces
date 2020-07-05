@@ -11,29 +11,35 @@ const int N = 1e5 + 5;
 int32_t main()
 {
    IOS;
-   string s;
-   cin >> s;
-   char c='a';
+   string a,b;
+   cin >> a >> b;
 
-   for(int i=0; i<s.length();i++)
+   for(int i=0; i<a.length();i++)
    {
-   		if(s[i]<=c)
-   		{
-   			s[i]=c;
-   			c++;
-   		}
+   		a[i]=tolower(a[i]);
+   		b[i]=tolower(b[i]);
 
-   		if(c>'z')
+   		if(a[i]>b[i])
    		{
-   			cout << s;
+   			cout << 1 << endl;
    			return 0;
    		}
+
+   		else if(a[i]<b[i])
+   		{
+   			cout << -1 << endl;
+   			return 0;
+   		}
+
+   		
+
+
    }
 
-   cout << -1 << endl;
+   cout << 0 << endl;
 
 
 
    return 0;
 }
- 	
+ 

@@ -11,29 +11,20 @@ const int N = 1e5 + 5;
 int32_t main()
 {
    IOS;
-   string s;
-   cin >> s;
-   char c='a';
-
-   for(int i=0; i<s.length();i++)
+   int t;
+   cin >> t;
+   while(t--)
    {
-   		if(s[i]<=c)
-   		{
-   			s[i]=c;
-   			c++;
-   		}
+   		int x,y,n;
+   		cin >> x >> y >> n;
 
-   		if(c>'z')
-   		{
-   			cout << s;
-   			return 0;
-   		}
+   		int div=(n-y)/x;
+
+   		cout << (div*x)+y << endl;   
    }
-
-   cout << -1 << endl;
-
+   
 
 
    return 0;
 }
- 	
+ 
